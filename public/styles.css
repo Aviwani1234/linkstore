@@ -1,0 +1,18 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin: 0;
+    padding: 0.2rem;
+    background-color: #800500;
+    box-shadow: none;
+    /* border: solid 2px yellow; */
+}
+
+header h1{
+    margin-left: 1.2rem;
+    font-family:'Courier New', Courier, monospace;
+    color: #ffffff;
+}
