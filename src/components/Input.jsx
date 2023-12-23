@@ -1,15 +1,34 @@
 import React, { useState } from "react";
 
 function Input() {
-  const [url, setUrl] = useState("");
-  var [link, setLink] = useState("");
+  const [data, setData] = useState({
+    name: "",
+    url: "",
+  });
 
-  function changeURL(event) {
-    setUrl(event.target.value);
+  const [showAnchor, setShowAnchor] = useState(false);
+
+  function handleChange(event) {
+    const inputData = event.target.value;
+    const inputName = event.target.name;
+
+    setData((prevValue) => {
+      if (inputName === "url") {
+        return {
+          url: inputData,
+          name: prevValue.name,
+        };
+      } else if (inputName === "name") {
+        return {
+          url: prevValue.url,
+          name: inputData,
+        };
+      }
+    });
   }
 
   function handleSubmit(event) {
-    setLink(url);
+    setShowAnchor(true);
     event.preventDefault();
   }
 
@@ -19,12 +38,22 @@ function Input() {
         <input
           placeholder="Enter your URL"
           type="url"
-          onChange={changeURL}
-          value={url}
+          onChange={handleChange}
+          value={data.url}
+          name="url"
+        />
+        <input
+          placeholder="Enter your URL name"
+          type="text"
+          onChange={handleChange}
+          value={data.name}
+          name="name"
         />
         <button type="submit">Add</button>
       </form>
-      <a href={link}>link</a>
+
+      {showAnchor && <a href={data.url}>{data.name}</a>}
+
     </div>
   );
 }
@@ -33,8 +62,8 @@ export default Input;
 
 // 1. display link after submit --- done
 // 2. convert it into <a></a> tag --- done
-//       2.a onsubmit add link
-//       2.b give one more fild to add name of link
+//       2.a onsubmit add link --- done
+//       2.b give one more fild to add name of link  --- done
 //       2.c add style
 // 3. make array of anchor tag
 // 4. display array of anchor tag
