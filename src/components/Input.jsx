@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "./Input.css"
+
 
 function Input() {
   const [data, setData] = useState({
@@ -33,8 +35,8 @@ function Input() {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className="ipt">
+      <form className="create-url" onSubmit={handleSubmit}>
         <input
           placeholder="Enter your URL"
           type="url"
@@ -64,7 +66,7 @@ export default Input;
 // 2. convert it into <a></a> tag --- done
 //       2.a onsubmit add link --- done
 //       2.b give one more fild to add name of link  --- done
-//       2.c add style
+//       2.c add style --- done
 // 3. make array of anchor tag
 // 4. display array of anchor tag
 //       4.a add style

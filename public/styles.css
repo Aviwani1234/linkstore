@@ -18,9 +18,9 @@ header h1 {
 }
 
 footer {
-    position: absolute;
-    bottom: 1rem;
-    text-align: center;
-    width: 100%;
-    color: #ccc;
+  position: absolute;
+  bottom: 1rem;
+  text-align: center;
+  width: 100%;
+  color: #ccc;
 }
