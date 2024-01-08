@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import "./Input.css"
-
+import "./Input.css";
 
 function Input() {
   const [data, setData] = useState({
@@ -34,6 +33,27 @@ function Input() {
     event.preventDefault();
   }
 
+  const PostData = async (e) => {
+    setShowAnchor(true);
+    e.preventDefault();
+
+    const { name, url } = data;
+
+    const res = await fetch(
+      "https://linkstore-7edfe-default-rtdb.firebaseio.com/linkstore.json",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          url,
+        }),
+      }
+    );
+  };
+
   return (
     <div className="ipt">
       <form className="create-url" onSubmit={handleSubmit}>
@@ -51,11 +71,10 @@ function Input() {
           value={data.name}
           name="name"
         />
-        <button type="submit">Add</button>
+        <button type="submit" onClick={PostData}>Add</button>
       </form>
 
       {showAnchor && <a href={data.url}>{data.name}</a>}
-
     </div>
   );
 }
