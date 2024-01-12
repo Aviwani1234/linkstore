@@ -1,14 +1,19 @@
-import Header from "./Header";
-import Footer from "./Footer";
-import Input from "./Input";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Home from "./Home";
+import Login from "../pages/Login"
+import Register from "../pages/Register"
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Input />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/register" element={<Register />}></Route>
+      </Routes>
+    </Router>
   );
 }
 

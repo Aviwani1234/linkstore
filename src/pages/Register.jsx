@@ -9,6 +9,7 @@ function Register() {
         <input type="text" placeholder="Enter Your Last Name" />
         <input type="email" placeholder="Enter Your Email Id" />
         <input type="password" placeholder="Enter A Strong Password" />
+        <button type="submit">Register</button>
       </form>
     </div>
   );
