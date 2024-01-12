@@ -53,7 +53,8 @@ function Input() {
       }
     );
   };
-
+  console.log(res);
+  
   return (
     <div className="ipt">
       <form className="create-url" onSubmit={handleSubmit}>
