@@ -52,7 +52,7 @@ function Input() {
         }),
       }
     );
-    console.log(res);
+    //console.log(res);
   };
 
   return (
