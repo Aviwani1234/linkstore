@@ -1,0 +1,25 @@
+.register form {
+  border: 0.2rem solid red;
+  margin: 5rem 26rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+  align-items: center;
+}
+
+.register form input {
+  border: 0.01rem solid blue;
+  margin: 0.5rem;
+  padding: 1rem;
+  width: 18rem;
+  height: 1rem;
+}
+
+.register form button {
+  padding: 0.5rem;
+  margin-top: 1rem;
+  width: 8rem;
+  height: 2.2rem;
+}

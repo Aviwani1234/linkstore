@@ -1,0 +1,24 @@
+.login form {
+  border: 0.2rem solid red;
+  margin: 6rem 30rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+  align-items: center;
+}
+
+.login form input {
+  border: 0.01rem solid blue;
+  margin: 1rem;
+  padding: 1rem;
+  width: 14rem;
+  height: 1rem;
+}
+
+.login form button {
+  padding: 0.5rem;
+  width: 6rem;
+  height: 2.8rem;
+}
