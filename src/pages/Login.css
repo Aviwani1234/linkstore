@@ -18,7 +18,10 @@
 }
 
 .login form button {
+  margin: 1rem;
   padding: 0.5rem;
-  width: 6rem;
+  width: 16rem;
   height: 2.8rem;
+  font-weight: bold;
+  font-size: large;
 }
